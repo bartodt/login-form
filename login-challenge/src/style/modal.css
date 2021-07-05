@@ -1,0 +1,85 @@
+.modal-header {
+  text-align: end;
+  padding: 2px 16px;
+  background-color: #014948;
+  color: white;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #014948;
+  color: white;
+}
+
+.modal-text {
+  color: white;
+}
+
+.modal-input {
+  max-width: none !important;
+  margin-top: 20px!important;
+  margin-bottom: 20px!important;
+}
+
+.modal-content {
+  border-color: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #014948;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.btn-modal {
+  margin-left: auto;
+  width: 200px;
+  background-color: rgb(57, 173, 168);
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-modal:hover {
+  background-color: rgb(28, 90, 84);
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 20;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .modal-content {
+    width: 80%;
+  }
+}

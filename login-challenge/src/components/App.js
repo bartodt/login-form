@@ -31,12 +31,9 @@ function App() {
     };
 
     websocket.onmessage = function (event) {
-      // The connection opens but sometimes returns "{\"topic\":\"keepalive\"}"
       let response = JSON.parse(event.data);
       if (response.hasOwnProperty("price")) {
-        let timestamps = new Date(response.dt).toLocaleTimeString([], {
-          timeStyle: "short",
-        });
+        let timestamps = new Date(response.dt).toLocaleTimeString([], { timeZoneName: 'short' });
 
         setExchange({
           price: response.price,

@@ -47,7 +47,7 @@ function App() {
     };
   }, []);
 
-  async function postData() {
+   function postData() {
     setLoading(true);
     axios
       .post("/login", initialState)
